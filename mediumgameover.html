@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Gameover.css" />
+    <title>Medium Game over</title>
+  </head>
+  <body>
+    <!-- The main container -->
+    <div>
+      <!-- Game Over message -->
+      <p id="gameover">Game<span>O</span>ver</p>
+    </div>
+    <div id="code">Your Score:<span></span><span id="gamescore">0</span></div>
+    <!-- Button to play again -->
+    <a href="level.html">
+      <!-- Play Again button with hover effect -->
+      <button class="glow-on-hover" type="button">
+        <b>Play Again</b>
+      </button>
+    </a>
+    <!-- Get the score from local storage -->
+    <script>
+      var score = localStorage.getItem("mediumscore");
+      document.getElementById("gamescore").innerHTML = score;
+      console.log(score);
+    </script>
+  </body>
+</html>

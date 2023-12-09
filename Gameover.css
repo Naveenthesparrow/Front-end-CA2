@@ -1,0 +1,237 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+/* Set background color and hide overflow */
+body {
+  background-color: #111111;
+  overflow: hidden;
+}
+
+/* Styling for div element */
+div {
+  margin-top: 90px;
+  font-size: 85px;
+  font-family: "Monoton", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+  color: red;
+}
+/* Styling for paragraphs inside div */
+div p {
+  margin: 5px;
+}
+
+/* Styling for gameover element on hover */
+#gameover:hover {
+  text-shadow: 0 0 200px #ffffff, 0 0 80px #008000, 0 0 6px #0000ff;
+}
+
+/* Styling for code element on hover */
+#code:hover {
+  text-shadow: 0 0 100px red, 0 0 40px firebrick, 0 0 8px darkred;
+}
+
+/* Styling for gameover element */
+#gameover {
+  color: #fff;
+  /* White shadow */
+  text-shadow: 0 0 80px #ffffff;
+  text-shadow: 0 0 30px #008000;
+  text-shadow: 0 0 6px #0000ff;
+}
+
+/* Styling for gameover span */
+#gameover span {
+  animation: upper 6s linear infinite;
+}
+
+/* Styling for second span inside code element */
+#code span:nth-of-type(2) {
+  animation: lower 9s linear infinite;
+}
+
+/* Styling for first span inside code element */
+#code span:nth-of-type(1) {
+  text-shadow: none;
+  opacity: 0.4;
+}
+
+/* Animation for upper keyframes */
+@keyframes upper {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+    text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+  }
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+/* Animation for lower keyframes */
+@keyframes lower {
+  0%,
+  12%,
+  18.999%,
+  23%,
+  31.999%,
+  37%,
+  44.999%,
+  46%,
+  49.999%,
+  51%,
+  58.999%,
+  61%,
+  68.999%,
+  71%,
+  85.999%,
+  96%,
+  100% {
+    opacity: 0.99;
+    text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+  }
+
+  19%,
+  22.99%,
+  32%,
+  36.999%,
+  45%,
+  45.999%,
+  50%,
+  50.99%,
+  59%,
+  60.999%,
+  69%,
+  70.999%,
+  86%,
+  95.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+/* Styling for button */
+a {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -280px;
+  margin-left: 15px;
+}
+
+/* Styles for the glow-on-hover class */
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+/* Styles for the pseudo-element before the glow-on-hover class */
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Styles for the active state of the glow-on-hover class */
+.glow-on-hover:active {
+  color: #000;
+}
+
+/* Styles for the pseudo-element after the glow-on-hover class in the active state */
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+/* Styles for the pseudo-element before the glow-on-hover class on hover */
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+/* Styles for the pseudo-element after the glow-on-hover class */
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* Keyframes animation for glowing effect */
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Apply responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 3.2rem;
+    margin-left: 200px;
+  }
+  div {
+    font-size: 35px;
+  }
+  button {
+    margin-top: 170px;
+  }
+}

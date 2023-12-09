@@ -1,0 +1,160 @@
+/* Set box shadow for the game canvas */
+#gameCanvas {
+  box-shadow: 10px 10px 20px black;
+}
+
+/* Styles for h1 element */
+h1 {
+  text-align: center;
+  font-family: comic sans MS;
+  color: lightgrey;
+}
+
+/* Styles for body */
+body {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  background: black;
+  margin-top: 130px;
+}
+
+/* Styles for score display */
+#scoreDisplay {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+}
+
+/* Styling for the button */
+#audioToggle {
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  background-color: rgb(238, 255, 0);
+  color: #0b0b0b;
+  font-weight: bolder;
+  border: none;
+}
+
+/* Styling for the title */
+.title {
+  position: absolute;
+  top: 5%;
+  left: 12%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  z-index: 5;
+  color: transparent;
+  background-position: 0 0;
+  font-family: "Roboto", sans-serif;
+  animation: animated-text 20s linear infinite;
+}
+
+/* Animation keyframes for the title */
+@keyframes animated-text {
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Styling for the first part of the title */
+.one {
+  -webkit-text-stroke: 1px #fff;
+  background: url(images/assest\ font.png);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Styling for h2 element */
+h2 {
+  font-size: 2em;
+  color: #fffffff1;
+  position: absolute;
+  top: 10%;
+  font-family: "PT Serif", serif;
+}
+
+/* Apply responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+  /* Styling for h1 element */
+  h1 {
+    font-size: 1.5rem;
+    margin-left: 200px;
+  }
+
+  /* Styling for score display smaller screen */
+  #scoreDisplay {
+    font-size: 30px;
+    margin-right: -50px;
+    margin-top: 40px;
+  }
+  #gameCanvas {
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+  }
+  /* Styling for the main element */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    position: absolute;
+    top: 580px;
+    left: 200px;
+  }
+  /* Styling for the controller smaller screen */
+  .controller {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+  }
+  /* Styling for the buttons smaller screen */
+  .button {
+    width: 30px;
+    height: 30px;
+    background-color: #0438f4;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+  /* Hover effect for the buttons smaller screen */
+  .button:hover {
+    background-color: #f6fcff;
+  }
+
+  .up {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .right {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .down {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}

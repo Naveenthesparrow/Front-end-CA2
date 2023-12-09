@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="infopage.css" />
+    <title>Infopage</title>
+  </head>
+  <body>
+    <!-- Overlay div -->
+    <div class="overlay"></div>
+
+    <!-- Title heading -->
+    <h1 class="title one">Pac-Man Gaming</h1>
+
+    <!-- Register box -->
+    <div class="register-box">
+      <!-- Register Page heading -->
+      <h2>Register Page</h2>
+
+      <!-- Registration form -->
+      <form onsubmit="startGame(event)">
+        <!-- Player name input -->
+        <div class="input-box">
+          <input type="text" id="playerName" required />
+          <label>Enter your Name</label>
+        </div>
+
+        <!-- Player nickname input -->
+        <div class="input-box">
+          <input type="text" id="playerNickname" required />
+          <label>Enter your Nick Name</label>
+        </div>
+
+        <!-- Start game button -->
+        <button type="submit">Let's Play</button>
+      </form>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="infopage.js"></script>
+    <!-- The JavaScript file for the info page -->
+  </body>
+</html>

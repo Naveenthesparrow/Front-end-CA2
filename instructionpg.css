@@ -1,0 +1,221 @@
+/* Import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Poppins:wght@100;200&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+/* Set default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background image and styles for the body */
+body {
+  background: url("./images/503081.jpg") center/cover no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Add an overlay to the background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Add styles for the title */
+.title {
+  position: absolute;
+  top: 5%;
+  left: 12%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  z-index: 5;
+  color: transparent;
+  background-position: 0 0;
+  font-family: "Roboto", sans-serif;
+  animation: animated-text 20s linear infinite;
+}
+
+/* Define the animation for the title */
+@keyframes animated-text {
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Add styles for the "one" class */
+.one {
+  -webkit-text-stroke: 1px #fff;
+  background: url(images/assest\ font.png);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Add styles for the register-box */
+.register-box {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  background: transparent;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  backdrop-filter: blur(15px);
+}
+/* Apply styles for instructions */
+.instruction {
+  color: #fff;
+  line-height: 30px;
+}
+
+/* Apply styles for h3 headings */
+h3 {
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Apply styles for buttons */
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  position: relative;
+  font-family: "PT Serif", serif;
+  font-size: calc(var(--font) * 20);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1em;
+  transform: all 0.5s cubic-bezier(0.1, 0.66, 1, 0.17);
+  cursor: pointer;
+}
+
+/* Apply styles for the first button */
+.first {
+  background: none;
+  background: -webkit-linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Apply styles for the first button on hover */
+.first:hover {
+  background: -webkit-linear-gradient(90deg, #ffffff 0%, #f0f1f8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Apply styles for the pseudo-element before the first button */
+.first::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  border: 12px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  transition: border 600ms, opacity 600ms cubic-bezier(0.1, 0.66, 1, 0.17);
+}
+
+/* Apply styles for the pseudo-element before the first button on hover */
+.first:hover::before {
+  opacity: 0;
+}
+
+/* Apply styles for the pseudo-element after the first button */
+.first::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: none;
+  border: 12px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  opacity: 0;
+  z-index: -1;
+  transform: scaleX(1.4) scaleY(1.6);
+  transition: opacity 500ms,
+    transform 500ms cubic-bezier(0.29, 0.57, 0.74, 0.32);
+}
+
+/* Apply styles for the pseudo-element after the first button on hover */
+.first:hover::after {
+  opacity: 1;
+  transform: scaleX(1) scaleY(1);
+}
+
+/* Apply responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+  /* Adjust font size for title */
+  .title {
+    font-size: 1.3rem;
+    margin-top: 2px;
+  }
+
+  /* Adjust width for register-box */
+  .register-box {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  /* Adjust font size and margin for h3 headings */
+  h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  /* Adjust margin for buttons */
+  .btn {
+    margin-top: 0.5em;
+    font-size: calc(var(--font) * 15);
+    padding: 0.5rem 1rem;
+  }
+
+  /* Adjust margin for instruction */
+  .instruction {
+    line-height: 26px;
+  }
+
+  /* Set font size and margin for h1 */
+  h1 {
+    font-size: 1.5rem;
+    margin-left: 200px;
+  }
+
+  /* Set margin and font size for li */
+  li {
+    margin-left: 15px;
+    font-size: 15px;
+  }
+
+  /* Set font size for p */
+  p {
+    font-size: 15px;
+  }
+}

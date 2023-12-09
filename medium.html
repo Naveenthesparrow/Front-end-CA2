@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Pac-Man</title>
+  </head>
+
+  <body>
+    <!--Title of the game  -->
+
+    <div>
+      <h1 class="title one">Pac-Man Gaming</h1>
+
+      <!-- Game Canvas -->
+
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- Score Display -->
+    <div id="scoreDisplay">Score: <span id="scoreValue">0</span></div>
+
+    <!-- sound button -->
+
+    <button id="audioToggle">🎵ON/OFF</button>
+
+    <!-- Background Music -->
+    <audio id="gameAudio" loop>
+      <source src="sounds/bg.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- Background Music with volume -->
+    <audio id="backgroundMusic" loop volume="0.5">
+      <source src="sounds/bg.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- Java Script -->
+    <script src="./medium/medium.js" type="module"></script>
+    <!-- The JavaScript file for the game logic (Medium mode) -->
+    <script src="Backgroundmusic.js"></script>
+    <!-- The JavaScript file for the background music -->
+  </body>
+</html>

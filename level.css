@@ -1,0 +1,203 @@
+/* Importing Fonts */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Poppins:wght@100;200&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+/* Resetting Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  background: url("./images/503081.jpg") center/cover no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Title */
+.title {
+  position: absolute;
+  top: 5%;
+  left: 12%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  z-index: 5;
+  color: transparent;
+  background-position: 0 0;
+  font-family: "Roboto", sans-serif;
+  animation: animated-text 20s linear infinite;
+}
+
+@keyframes animated-text {
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Styling for text with class "one" */
+.one {
+  -webkit-text-stroke: 1px #fff;
+  background: url(images/assest\ font.png);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Styling for box */
+.box {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  background: transparent;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  backdrop-filter: blur(15px);
+  line-height: 50px;
+}
+/* Styles for heading h3 */
+h3 {
+  font-family: "PT Serif", serif;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Styles for the button */
+a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+/* Styles for the easy difficulty level */
+a:hover p.easy {
+  color: #000000;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+}
+
+/* Styles for the medium difficulty level */
+a:hover p.medium {
+  color: rgb(0, 0, 0);
+  background: #ffff3f;
+  box-shadow: 0 0 10px #ffff3f, 0 0 40px #ffff3f, 0 0 80px #ffff3f;
+  transition-delay: 1s;
+}
+
+/* Styles for the hard difficulty level */
+a:hover p.hard {
+  color: rgb(0, 0, 0);
+  background: #ff0000;
+  box-shadow: 0 0 10px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+  transition-delay: 1s;
+}
+
+/* Styles for the animation span elements */
+a span {
+  position: absolute;
+  display: block;
+}
+
+/* Styles for the first span element */
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f32121);
+}
+
+/* Styles for the second span element */
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+/* Styles for the third span element */
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #def321);
+}
+
+/* Styles for the fourth span element */
+a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+/* Styles for the fifth span element */
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #44f321);
+}
+
+/* Styles for the sixth span element */
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+/* Styles for the seventh span element */
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ff00d9);
+}
+
+/* Styles for the eighth span element */
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+/* Apply responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+    margin-top: 43px;
+    margin-left: 185px;
+  }
+}
